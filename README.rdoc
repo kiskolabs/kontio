@@ -1,0 +1,3 @@
+== Kontio
+
+Kontio is a web app for managing Postfix virtual domains and users.
