@@ -1,0 +1,32 @@
+!!!
+- ie_html class: "no-js", lang: "en" do
+  %html
+    %head
+      = render "layouts/meta"
+      %title Kontio
+      = stylesheet_link_tag    "application", media: "all"
+      = javascript_include_tag "application"
+      = csrf_meta_tags
+    %body
+      .navbar.navbar-fixed-top
+        .navbar-inner
+          .container
+            %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            = link_to "Kontio Postfix", root_path, class: "brand"
+            .nav-collapse
+              %ul.nav
+                = navigate_to :home, "Home", root_path
+                - if administrator_signed_in?
+                  = navigate_to :domains, "Domains", domains_path
+                  = navigate_to :forwardings, "Forwardings", forwardings_path
+                  = navigate_to :users, "Users", users_path
+                  = navigate_to :authentications, "Your Account", authentications_path
+                  %li= link_to "Sign out", destroy_administrator_session_path, method: :delete
+                - else
+                  = navigate_to :devise, "Sign in", new_administrator_session_path
+      #content.container
+        = flash_messages
+        = yield

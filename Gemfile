@@ -6,11 +6,13 @@ gem "capistrano"
 gem "devise", "~> 2.0.4"
 gem "haml-rails"
 gem "jquery-rails"
+gem "omniauth-github", "~> 1.0.1"
 gem "simple_form"
 
 group :assets do
   gem "bootstrap-sass", "~> 2.0.1"
   gem "coffee-rails",   "~> 3.2.1"
+  gem "compass-rails"
   gem "sass-rails",     "~> 3.2.3"
   gem "therubyracer"
   gem "uglifier",       ">= 1.0.3"
