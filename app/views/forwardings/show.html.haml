@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Source:
+  = @forwarding.source
+%p
+  %b Destination:
+  = @forwarding.destination
+
+= link_to 'Edit', edit_forwarding_path(@forwarding)
+\|
+= link_to 'Back', forwardings_path

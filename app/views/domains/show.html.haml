@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Domain:
+  = @domain.domain
+
+= link_to 'Edit', edit_domain_path(@domain)
+\|
+= link_to 'Back', domains_path

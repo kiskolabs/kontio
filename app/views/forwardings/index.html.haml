@@ -1,0 +1,21 @@
+%h1 Listing forwardings
+
+%table
+  %tr
+    %th Source
+    %th Destination
+    %th
+    %th
+    %th
+
+  - @forwardings.each do |forwarding|
+    %tr
+      %td= forwarding.source
+      %td= forwarding.destination
+      %td= link_to 'Show', forwarding
+      %td= link_to 'Edit', edit_forwarding_path(forwarding)
+      %td= link_to 'Destroy', forwarding, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Forwarding', new_forwarding_path
