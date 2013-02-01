@@ -244,6 +244,7 @@ DEPENDENCIES
   omniauth-github (~> 1.0.1)
   pg
   rails (= 3.2.11)
+  rake (= 10.0.3)
   rspec-rails (~> 2.8)
   sass-rails (~> 3.2.3)
   shoulda-matchers
