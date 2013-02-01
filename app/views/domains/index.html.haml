@@ -1,19 +1,20 @@
-%h1 Listing domains
+%header
+  %h1 Domains
+  %p.lead
+    These are your domains
+%section
+  .row
+    %table.table.span12
+      %tr
+        %th Domain
+        %th
 
-%table
-  %tr
-    %th Domain
-    %th
-    %th
-    %th
-
-  - @domains.each do |domain|
-    %tr
-      %td= domain.domain
-      %td= link_to 'Show', domain
-      %td= link_to 'Edit', edit_domain_path(domain)
-      %td= link_to 'Destroy', domain, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Domain', new_domain_path
+      - @domains.each do |domain|
+        %tr
+          %td= link_to domain.domain, domain
+          %td
+            .btn-group
+              = link_to "Edit", edit_domain_path(domain), class: "btn"
+              = link_to "Delete", domain, method: :delete, confirm: "Are you sure?", class: "btn btn-danger"
+    .span12
+      = link_to 'New Domain', new_domain_path, class: "btn btn-large"
