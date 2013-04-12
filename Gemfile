@@ -3,6 +3,7 @@ source "https://rubygems.org"
 gem "rails", "3.2.13"
 gem "rake", "10.0.3"
 
+gem "activeadmin", "~> 0.6.0"
 gem "capistrano"
 gem "devise", "~> 2.0.4"
 gem "haml-rails"
