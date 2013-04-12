@@ -1,8 +1,12 @@
 Kontio::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
+
+  root to: redirect("/admin")
+
   ActiveAdmin.routes(self)
 
-  devise_for :administrators
+  # devise_for :administrators
+
   ActiveAdmin.routes(self)
 
   resources :users
@@ -10,6 +14,4 @@ Kontio::Application.routes.draw do
   resources :forwardings
 
   resources :domains
-
-  root to: "domains#index"
 end
