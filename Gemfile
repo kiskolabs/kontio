@@ -26,7 +26,7 @@ end
 
 group :development, :test do
   gem "rspec-rails",    "~> 2.8"
-  gem "steak",          "~> 2.0"
+  gem "steak", "~> 2.0", ">= 2.0.0"
   gem "factory_girl_rails"
   gem "database_cleaner"
   gem "shoulda-matchers"
